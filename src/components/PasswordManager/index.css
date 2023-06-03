@@ -1,0 +1,167 @@
+.img {
+  height: 40px;
+  width: 90px;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-bottom: 5px;
+}
+.password-app-container {
+  background-color: #9ba9eb;
+  min-height: 100vh;
+  background-size: cover;
+}
+.image {
+  height: 400px;
+  width: 400px;
+}
+.className1 {
+    background-color: #f59e0b;
+}
+.className2 {
+    background-color: #10b981;
+}
+.className3 {
+    background-color: #f97316;
+}
+.className4 {
+    background-color: #14b8a6;
+}
+.className5 {
+    background-color: #b91c1c;
+}
+
+.card {
+  background-color: #5763a5;
+  border-radius: 8px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+
+  justify-content: space-around;
+}
+.password-manager {
+  background-color: #454f84;
+  margin-left: 70px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 16px #454f84;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+.button {
+  height: 35px;
+  width: 35px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border-right: 2px;
+  border-style: solid;
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  background-color: white;
+  margin-left: 40px;
+  border-color: #9ba9eb;
+}
+.add-btn {
+  border: 0px;
+  background-color: #0b69ff;
+  margin: 15px;
+  text-align: center;
+  height: 30px;
+  font-family: 'Roboto';
+  width: 100px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.flex {
+  text-align: right;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70vw;
+}
+.checkbox {
+  height: 15px;
+  width: 15px;
+}
+input {
+  height: 35px;
+  cursor: pointer;
+  width: 360px;
+  margin-top: 30px;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.website {
+  height: 12px;
+  width: 14px;
+}
+.password-manager-img {
+  height: 400px;
+  width: 400px;
+}
+.head {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.head2 {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 27px;
+}
+.card2 {
+  background-color: #5763a5;
+  border-radius: 8px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+.flex-direction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.search-input {
+  height: 30px;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 20px;
+  outline: none;
+  border: 0px;
+
+  margin-right: 30px;
+}
+.search-card {
+  height: 30px;
+  cursor: pointer;
+  width: 30px;
+  margin-top: 20px;
+  outline: none;
+  border: 0px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-img {
+  height: 20px;
+  width: 20px;
+}
