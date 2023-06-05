@@ -42,7 +42,7 @@ class PasswordManager extends Component {
       website: '',
       username: '',
       password: '',
-      isShow: false,
+      searchInput: '',
     }))
   }
 
@@ -60,10 +60,8 @@ class PasswordManager extends Component {
 
   FindCheckedOrNot = event => {
     if (event.target.checked) {
-      console.log('Checked')
       this.setState({isShow: true})
     } else {
-      console.log('Not Checked')
       this.setState({isShow: false})
     }
   }
@@ -88,7 +86,7 @@ class PasswordManager extends Component {
       passwordManagerList,
     } = this.state
     const searchResults = passwordManagerList.filter(each =>
-      each.website.toLowerCase().includes(searchInput.toLowerCase()),
+      each.websiteName.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
     return (
@@ -114,6 +112,7 @@ class PasswordManager extends Component {
                 onChange={this.onChangeWebsite}
                 value={website}
                 name="website"
+                placeholder="Enter Website"
               />
             </div>
             <div>
@@ -129,6 +128,7 @@ class PasswordManager extends Component {
                 onChange={this.onChangeUsername}
                 value={username}
                 name="username"
+                placeholder="Enter Username"
               />
             </div>
             <div>
@@ -144,6 +144,7 @@ class PasswordManager extends Component {
                 onChange={this.onChangePassword}
                 value={password}
                 name="pass"
+                placeholder="Enter Password"
               />
             </div>
             <div className="flex">
@@ -161,6 +162,7 @@ class PasswordManager extends Component {
         <div className="card2">
           <div className="flex-direction">
             <h1 className="head">Your Passwords</h1>
+            <p>{searchResults.length}</p>
             <div className="flex-direction">
               <div className="search-card">
                 <img
@@ -175,6 +177,7 @@ class PasswordManager extends Component {
                 value={searchInput}
                 onChange={this.onChangeSearch}
                 name="searchvalue"
+                placeholder="Search"
               />
             </div>
           </div>
@@ -183,24 +186,35 @@ class PasswordManager extends Component {
               type="checkbox"
               className="checkbox"
               onChange={this.FindCheckedOrNot}
+              id="checkbox"
             />
-            <h1 className="head2">Show Passwords</h1>
+            <label className="head2" htmlFor="checkbox">
+              Show Passwords
+            </label>
           </div>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-            className="image"
-            alt="s"
-          />
-          <ul>
-            {searchResults.map(each => (
-              <PasswordItem
-                passwordDetails={each}
-                key={each.id}
-                isshow={isShow}
-                filteredPasswords={this.filteredPasswords}
-              />
-            ))}
-          </ul>
+          <div>
+            {searchResults.length === 0 ? (
+              <div>
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+                  className="image"
+                  alt="no passwords"
+                />
+                <p>No Passwords</p>
+              </div>
+            ) : (
+              <ul>
+                {searchResults.map(each => (
+                  <PasswordItem
+                    passwordDetails={each}
+                    key={each.id}
+                    isShow={isShow}
+                    filteredPasswords={this.filteredPasswords}
+                  />
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     )

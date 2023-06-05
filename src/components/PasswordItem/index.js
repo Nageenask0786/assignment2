@@ -7,32 +7,35 @@ const PasswordItem = props => {
     websiteName,
     userName,
     Password,
-    isshow,
+    isShow,
     classColor,
   } = passwordDetails
   const onClickDelete = () => {
     filteredPasswords(id)
   }
-  console.log(isshow)
-
-  const passwordContent = isshow ? (
-    Password
-  ) : (
-    <img
-      src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
-      alt="stars"
-    />
-  )
-
+  console.log(isShow)
   return (
     <li className="password-items">
       <div className={classColor}>{websiteName[0].toUpperCase()}</div>
       <div>
-        <h1>{websiteName}</h1>
-        <h1>{userName}</h1>
-        <h1>{passwordContent}</h1>
+        <p>{websiteName}</p>
+        <p>{userName}</p>
+        <div>
+          {!isShow && (
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+              alt="stars"
+            />
+          )}
+          {isShow && <p>{Password}</p>}
+        </div>
       </div>
-      <button type="button" className="del-btn" onClick={onClickDelete}>
+      <button
+        type="button"
+        className="del-btn"
+        onClick={onClickDelete}
+        data-testid="delete"
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
           alt="delete"
