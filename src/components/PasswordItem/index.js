@@ -1,15 +1,8 @@
 import './index.css'
 
 const PasswordItem = props => {
-  const {passwordDetails, filteredPasswords} = props
-  const {
-    id,
-    websiteName,
-    userName,
-    Password,
-    isShow,
-    classColor,
-  } = passwordDetails
+  const {passwordDetails, filteredPasswords, isShow} = props
+  const {id, websiteName, userName, Password, classColor} = passwordDetails
   const onClickDelete = () => {
     filteredPasswords(id)
   }
